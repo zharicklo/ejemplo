@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+       <script type="text/javascript">
+            function Media() {
+                var nota1 = parseInt(document.getElementById("nota1").value);
+                var nota2 = parseInt(document.getElementById("nota2").value);
+                var nota3 = parseInt(document.getElementById("nota3").value);
+                var resultado = (nota1 + nota2 + nota3) / 3;
+
+                if (resultado >= 9) {
+                    alert(resultado + " sobresaliente");
+                } else if (resultado >= 7) {
+                    alert(resultado + " notable");
+                } else if (resultado >= 6) {
+                    alert(resultado + " bien");
+                } else if (resultado >= 5) {
+                    alert(resultado + " suficiente");
+                } else {
+                    alert(resultado + " suspenso");
+                }
+            }
+       </script>
+
+       
+    </head>
+    <body>
+        <form action="#">
+            <fieldset>
+                 <label for="nota1">nota1</label>
+                 <input type="number" name="nota1" id="nota1" min="0" max="10">
+                 <label for="nota2">nota2</label>
+                 <input type="number" name="nota2" id="nota2" min="0" max="10">
+                 <label for="nota3">nota3</label>
+                 <input type="number" name="nota3" id="nota3" min="0" max="10">
+            </fieldset>
+        </form>
+        <button onclick="Media()">Media</button>
+    </body>     
+</html>    
